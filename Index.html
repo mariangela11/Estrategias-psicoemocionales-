@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proyecto de Intervención Social</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 0; padding: 20px; background-color: #f4f4f9; color: #333; }
+        header { background-color: #2c3e50; color: white; padding: 20px; text-align: center; border-radius: 8px; }
+        nav { display: flex; gap: 10px; margin: 20px 0; justify-content: center; }
+        nav button { padding: 10px 15px; border: none; background-color: #3498db; color: white; border-radius: 5px; cursor: pointer; }
+        .seccion { display: none; background: white; padding: 20px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+        .activa { display: block; }
+        .estrategia-card { background: #eef2f5; border-left: 5px solid #3498db; margin: 10px 0; padding: 15px; border-radius: 4px; }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Proyecto</h1>
+        <p>Estrategias psicoemocionales</p>
+    </header>
+
+    <nav>
+        <button onclick="verSeccion('inicio')">Inicio</button>
+        <button onclick="verSeccion('estrategias')">Estrategias</button>
+        <button onclick="verSeccion('indicaciones')">Recursos</button>
+    </nav>
+
+    <!-- SECCIÓN INICIO -->
+    <div id="inicio" class="seccion activa">
+        <h2>Presentación del Proyecto</h2>
+        <p>Añade aquí la justificación, objetivos y descripción del proyecto.</p>
+    </div>
+
+    <!-- SECCIÓN ESTRATEGIAS -->
+    <div id="estrategias" class="seccion">
+        <h2>Estrategias del Proyecto</h2>
+        <div class="estrategia-card">
+            <h3>Estrategia 1: Nombre de la Estrategia</h3>
+            <p><strong>Objetivo:</strong> Descripción detallada de la primera estrategia.</p>
+        </div>
+        <div class="estrategia-card">
+            <h3>Estrategia 2: Nombre de la Estrategia</h3>
+            <p><strong>Objetivo:</strong> Descripción detallada de la segunda estrategia.</p>
+        </div>
+    </div>
+
+    <!-- SECCIÓN RECURSOS -->
+    <div id="recuros" class="seccion">
+        <h2>Recursos y Descargables</h2>
+        <p>Aquí puedes incluir enlaces a carpetas de Google Drive, audios o guías en PDF.</p>
+    </div>
+
+    <script>
+        function verSeccion(id) {
+            document.querySelectorAll('.seccion').forEach(s => s.classList.remove('activa'));
+            document.getElementById(id).classList.add('activa');
+        }
+    </script>
+
+</body>
+</html>
